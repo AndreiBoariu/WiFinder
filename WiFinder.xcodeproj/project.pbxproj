@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF8CD9A02148FE590059D0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CD99F2148FE590059D0D9 /* AppDelegate.swift */; };
+		AF8CD9A22148FE590059D0D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CD9A12148FE590059D0D9 /* ViewController.swift */; };
+		AF8CD9A52148FE590059D0D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8CD9A32148FE590059D0D9 /* Main.storyboard */; };
+		AF8CD9A72148FE5C0059D0D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8CD9A62148FE5C0059D0D9 /* Assets.xcassets */; };
+		AF8CD9AA2148FE5C0059D0D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8CD9A82148FE5C0059D0D9 /* LaunchScreen.storyboard */; };
+		AF8CD9B52148FE5C0059D0D9 /* WiFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CD9B42148FE5C0059D0D9 /* WiFinderTests.swift */; };
+		AF8CD9C02148FE5C0059D0D9 /* WiFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CD9BF2148FE5C0059D0D9 /* WiFinderUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF8CD9B12148FE5C0059D0D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF8CD9942148FE590059D0D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF8CD99B2148FE590059D0D9;
+			remoteInfo = WiFinder;
+		};
+		AF8CD9BC2148FE5C0059D0D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF8CD9942148FE590059D0D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF8CD99B2148FE590059D0D9;
+			remoteInfo = WiFinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF8CD99C2148FE590059D0D9 /* WiFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8CD99F2148FE590059D0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF8CD9A12148FE590059D0D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF8CD9A42148FE590059D0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF8CD9A62148FE5C0059D0D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF8CD9A92148FE5C0059D0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF8CD9AB2148FE5C0059D0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF8CD9B02148FE5C0059D0D9 /* WiFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8CD9B42148FE5C0059D0D9 /* WiFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFinderTests.swift; sourceTree = "<group>"; };
+		AF8CD9B62148FE5C0059D0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF8CD9BB2148FE5C0059D0D9 /* WiFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8CD9BF2148FE5C0059D0D9 /* WiFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFinderUITests.swift; sourceTree = "<group>"; };
+		AF8CD9C12148FE5C0059D0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF8CD9992148FE590059D0D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8CD9AD2148FE5C0059D0D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8CD9B82148FE5C0059D0D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF8CD9932148FE590059D0D9 = {
+			isa = PBXGroup;
+			children = (
+				AF8CD99E2148FE590059D0D9 /* WiFinder */,
+				AF8CD9B32148FE5C0059D0D9 /* WiFinderTests */,
+				AF8CD9BE2148FE5C0059D0D9 /* WiFinderUITests */,
+				AF8CD99D2148FE590059D0D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF8CD99D2148FE590059D0D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF8CD99C2148FE590059D0D9 /* WiFinder.app */,
+				AF8CD9B02148FE5C0059D0D9 /* WiFinderTests.xctest */,
+				AF8CD9BB2148FE5C0059D0D9 /* WiFinderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF8CD99E2148FE590059D0D9 /* WiFinder */ = {
+			isa = PBXGroup;
+			children = (
+				AF8CD99F2148FE590059D0D9 /* AppDelegate.swift */,
+				AF8CD9A12148FE590059D0D9 /* ViewController.swift */,
+				AF8CD9A32148FE590059D0D9 /* Main.storyboard */,
+				AF8CD9A62148FE5C0059D0D9 /* Assets.xcassets */,
+				AF8CD9A82148FE5C0059D0D9 /* LaunchScreen.storyboard */,
+				AF8CD9AB2148FE5C0059D0D9 /* Info.plist */,
+			);
+			path = WiFinder;
+			sourceTree = "<group>";
+		};
+		AF8CD9B32148FE5C0059D0D9 /* WiFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF8CD9B42148FE5C0059D0D9 /* WiFinderTests.swift */,
+				AF8CD9B62148FE5C0059D0D9 /* Info.plist */,
+			);
+			path = WiFinderTests;
+			sourceTree = "<group>";
+		};
+		AF8CD9BE2148FE5C0059D0D9 /* WiFinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF8CD9BF2148FE5C0059D0D9 /* WiFinderUITests.swift */,
+				AF8CD9C12148FE5C0059D0D9 /* Info.plist */,
+			);
+			path = WiFinderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF8CD99B2148FE590059D0D9 /* WiFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8CD9C42148FE5C0059D0D9 /* Build configuration list for PBXNativeTarget "WiFinder" */;
+			buildPhases = (
+				AF8CD9982148FE590059D0D9 /* Sources */,
+				AF8CD9992148FE590059D0D9 /* Frameworks */,
+				AF8CD99A2148FE590059D0D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiFinder;
+			productName = WiFinder;
+			productReference = AF8CD99C2148FE590059D0D9 /* WiFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF8CD9AF2148FE5C0059D0D9 /* WiFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8CD9C72148FE5C0059D0D9 /* Build configuration list for PBXNativeTarget "WiFinderTests" */;
+			buildPhases = (
+				AF8CD9AC2148FE5C0059D0D9 /* Sources */,
+				AF8CD9AD2148FE5C0059D0D9 /* Frameworks */,
+				AF8CD9AE2148FE5C0059D0D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF8CD9B22148FE5C0059D0D9 /* PBXTargetDependency */,
+			);
+			name = WiFinderTests;
+			productName = WiFinderTests;
+			productReference = AF8CD9B02148FE5C0059D0D9 /* WiFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF8CD9BA2148FE5C0059D0D9 /* WiFinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8CD9CA2148FE5C0059D0D9 /* Build configuration list for PBXNativeTarget "WiFinderUITests" */;
+			buildPhases = (
+				AF8CD9B72148FE5C0059D0D9 /* Sources */,
+				AF8CD9B82148FE5C0059D0D9 /* Frameworks */,
+				AF8CD9B92148FE5C0059D0D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF8CD9BD2148FE5C0059D0D9 /* PBXTargetDependency */,
+			);
+			name = WiFinderUITests;
+			productName = WiFinderUITests;
+			productReference = AF8CD9BB2148FE5C0059D0D9 /* WiFinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF8CD9942148FE590059D0D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Momentous Tech Corp";
+				TargetAttributes = {
+					AF8CD99B2148FE590059D0D9 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					AF8CD9AF2148FE5C0059D0D9 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = AF8CD99B2148FE590059D0D9;
+					};
+					AF8CD9BA2148FE5C0059D0D9 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = AF8CD99B2148FE590059D0D9;
+					};
+				};
+			};
+			buildConfigurationList = AF8CD9972148FE590059D0D9 /* Build configuration list for PBXProject "WiFinder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF8CD9932148FE590059D0D9;
+			productRefGroup = AF8CD99D2148FE590059D0D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF8CD99B2148FE590059D0D9 /* WiFinder */,
+				AF8CD9AF2148FE5C0059D0D9 /* WiFinderTests */,
+				AF8CD9BA2148FE5C0059D0D9 /* WiFinderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF8CD99A2148FE590059D0D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8CD9AA2148FE5C0059D0D9 /* LaunchScreen.storyboard in Resources */,
+				AF8CD9A72148FE5C0059D0D9 /* Assets.xcassets in Resources */,
+				AF8CD9A52148FE590059D0D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8CD9AE2148FE5C0059D0D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8CD9B92148FE5C0059D0D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF8CD9982148FE590059D0D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8CD9A22148FE590059D0D9 /* ViewController.swift in Sources */,
+				AF8CD9A02148FE590059D0D9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8CD9AC2148FE5C0059D0D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8CD9B52148FE5C0059D0D9 /* WiFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8CD9B72148FE5C0059D0D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8CD9C02148FE5C0059D0D9 /* WiFinderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF8CD9B22148FE5C0059D0D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF8CD99B2148FE590059D0D9 /* WiFinder */;
+			targetProxy = AF8CD9B12148FE5C0059D0D9 /* PBXContainerItemProxy */;
+		};
+		AF8CD9BD2148FE5C0059D0D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF8CD99B2148FE590059D0D9 /* WiFinder */;
+			targetProxy = AF8CD9BC2148FE5C0059D0D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF8CD9A32148FE590059D0D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF8CD9A42148FE590059D0D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF8CD9A82148FE5C0059D0D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF8CD9A92148FE5C0059D0D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF8CD9C22148FE5C0059D0D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF8CD9C32148FE5C0059D0D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF8CD9C52148FE5C0059D0D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WiFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wifinder.WiFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF8CD9C62148FE5C0059D0D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WiFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wifinder.WiFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF8CD9C82148FE5C0059D0D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WiFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wifinder.WiFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WiFinder.app/WiFinder";
+			};
+			name = Debug;
+		};
+		AF8CD9C92148FE5C0059D0D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WiFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wifinder.WiFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WiFinder.app/WiFinder";
+			};
+			name = Release;
+		};
+		AF8CD9CB2148FE5C0059D0D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WiFinderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wifinder.WiFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WiFinder;
+			};
+			name = Debug;
+		};
+		AF8CD9CC2148FE5C0059D0D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WiFinderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wifinder.WiFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WiFinder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF8CD9972148FE590059D0D9 /* Build configuration list for PBXProject "WiFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8CD9C22148FE5C0059D0D9 /* Debug */,
+				AF8CD9C32148FE5C0059D0D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8CD9C42148FE5C0059D0D9 /* Build configuration list for PBXNativeTarget "WiFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8CD9C52148FE5C0059D0D9 /* Debug */,
+				AF8CD9C62148FE5C0059D0D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8CD9C72148FE5C0059D0D9 /* Build configuration list for PBXNativeTarget "WiFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8CD9C82148FE5C0059D0D9 /* Debug */,
+				AF8CD9C92148FE5C0059D0D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8CD9CA2148FE5C0059D0D9 /* Build configuration list for PBXNativeTarget "WiFinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8CD9CB2148FE5C0059D0D9 /* Debug */,
+				AF8CD9CC2148FE5C0059D0D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF8CD9942148FE590059D0D9 /* Project object */;
+}
