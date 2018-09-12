@@ -17,6 +17,7 @@ pod 'RxCocoa',    '~> 4.0'
 pod 'AsyncSwift'
 pod 'KVNProgress'
 pod 'Kingfisher'
+pod 'SwiftyJSON'
 
   target 'WiFinderTests' do
     inherit! :search_paths

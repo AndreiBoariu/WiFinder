@@ -11,12 +11,15 @@
 		23A3103427FD4963B04F1ACB /* Pods_WiFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3770489A8F716167761E9231 /* Pods_WiFinder.framework */; };
 		710C59C9544DF141FEFE1D8C /* Pods_WiFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757AC70F9A21BDF8B445F1E7 /* Pods_WiFinderUITests.framework */; };
 		AF8CD9A02148FE590059D0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CD99F2148FE590059D0D9 /* AppDelegate.swift */; };
-		AF8CD9A22148FE590059D0D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CD9A12148FE590059D0D9 /* ViewController.swift */; };
-		AF8CD9A52148FE590059D0D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8CD9A32148FE590059D0D9 /* Main.storyboard */; };
 		AF8CD9A72148FE5C0059D0D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8CD9A62148FE5C0059D0D9 /* Assets.xcassets */; };
-		AF8CD9AA2148FE5C0059D0D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8CD9A82148FE5C0059D0D9 /* LaunchScreen.storyboard */; };
 		AF8CD9B52148FE5C0059D0D9 /* WiFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CD9B42148FE5C0059D0D9 /* WiFinderTests.swift */; };
 		AF8CD9C02148FE5C0059D0D9 /* WiFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CD9BF2148FE5C0059D0D9 /* WiFinderUITests.swift */; };
+		AFF8E5ED21490A0500CDBF13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF8E5E921490A0500CDBF13 /* LaunchScreen.storyboard */; };
+		AFF8E5EE21490A0500CDBF13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF8E5EB21490A0500CDBF13 /* Main.storyboard */; };
+		AFF8E5F22149185D00CDBF13 /* MediaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF8E5F12149185D00CDBF13 /* MediaVC.swift */; };
+		AFF8E5F42149186D00CDBF13 /* ChatBotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF8E5F32149186D00CDBF13 /* ChatBotVC.swift */; };
+		AFF8E5F72149218700CDBF13 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF8E5F62149218700CDBF13 /* MediaCell.swift */; };
+		AFF8E5F9214923A600CDBF13 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF8E5F8214923A600CDBF13 /* Media.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +50,7 @@
 		A7661472057285E5D1B49CF0 /* Pods-WiFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiFinder/Pods-WiFinder.release.xcconfig"; sourceTree = "<group>"; };
 		AF8CD99C2148FE590059D0D9 /* WiFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8CD99F2148FE590059D0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF8CD9A12148FE590059D0D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AF8CD9A42148FE590059D0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF8CD9A62148FE5C0059D0D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF8CD9A92148FE5C0059D0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF8CD9AB2148FE5C0059D0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF8CD9B02148FE5C0059D0D9 /* WiFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8CD9B42148FE5C0059D0D9 /* WiFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFinderTests.swift; sourceTree = "<group>"; };
@@ -58,6 +58,12 @@
 		AF8CD9BB2148FE5C0059D0D9 /* WiFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8CD9BF2148FE5C0059D0D9 /* WiFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFinderUITests.swift; sourceTree = "<group>"; };
 		AF8CD9C12148FE5C0059D0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF8E5EA21490A0500CDBF13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFF8E5EC21490A0500CDBF13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFF8E5F12149185D00CDBF13 /* MediaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaVC.swift; sourceTree = "<group>"; };
+		AFF8E5F32149186D00CDBF13 /* ChatBotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotVC.swift; sourceTree = "<group>"; };
+		AFF8E5F62149218700CDBF13 /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
+		AFF8E5F8214923A600CDBF13 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		D85ED4E2ACF23E84BD79843A /* Pods-WiFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiFinderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiFinderUITests/Pods-WiFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,10 +144,11 @@
 			isa = PBXGroup;
 			children = (
 				AF8CD99F2148FE590059D0D9 /* AppDelegate.swift */,
-				AF8CD9A12148FE590059D0D9 /* ViewController.swift */,
-				AF8CD9A32148FE590059D0D9 /* Main.storyboard */,
+				AFF8E5E52149098800CDBF13 /* Controllers */,
+				AFF8E5F021490A3600CDBF13 /* Extensions */,
+				AFF8E5EF21490A3600CDBF13 /* Helpers */,
+				AFF8E5E821490A0500CDBF13 /* Storyboards */,
 				AF8CD9A62148FE5C0059D0D9 /* Assets.xcassets */,
-				AF8CD9A82148FE5C0059D0D9 /* LaunchScreen.storyboard */,
 				AF8CD9AB2148FE5C0059D0D9 /* Info.plist */,
 			);
 			path = WiFinder;
@@ -163,6 +170,64 @@
 				AF8CD9C12148FE5C0059D0D9 /* Info.plist */,
 			);
 			path = WiFinderUITests;
+			sourceTree = "<group>";
+		};
+		AFF8E5E52149098800CDBF13 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFF8E5E72149098800CDBF13 /* MediaModule */,
+				AFF8E5E62149098800CDBF13 /* ChatBotModule */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AFF8E5E62149098800CDBF13 /* ChatBotModule */ = {
+			isa = PBXGroup;
+			children = (
+				AFF8E5F32149186D00CDBF13 /* ChatBotVC.swift */,
+			);
+			path = ChatBotModule;
+			sourceTree = "<group>";
+		};
+		AFF8E5E72149098800CDBF13 /* MediaModule */ = {
+			isa = PBXGroup;
+			children = (
+				AFF8E5F52149216B00CDBF13 /* Cell */,
+				AFF8E5F12149185D00CDBF13 /* MediaVC.swift */,
+				AFF8E5F8214923A600CDBF13 /* Media.swift */,
+			);
+			path = MediaModule;
+			sourceTree = "<group>";
+		};
+		AFF8E5E821490A0500CDBF13 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AFF8E5E921490A0500CDBF13 /* LaunchScreen.storyboard */,
+				AFF8E5EB21490A0500CDBF13 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AFF8E5EF21490A3600CDBF13 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AFF8E5F021490A3600CDBF13 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AFF8E5F52149216B00CDBF13 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AFF8E5F62149218700CDBF13 /* MediaCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8CD9AA2148FE5C0059D0D9 /* LaunchScreen.storyboard in Resources */,
+				AFF8E5EE21490A0500CDBF13 /* Main.storyboard in Resources */,
 				AF8CD9A72148FE5C0059D0D9 /* Assets.xcassets in Resources */,
-				AF8CD9A52148FE590059D0D9 /* Main.storyboard in Resources */,
+				AFF8E5ED21490A0500CDBF13 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +379,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -328,6 +394,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -395,8 +462,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8CD9A22148FE590059D0D9 /* ViewController.swift in Sources */,
+				AFF8E5F42149186D00CDBF13 /* ChatBotVC.swift in Sources */,
 				AF8CD9A02148FE590059D0D9 /* AppDelegate.swift in Sources */,
+				AFF8E5F72149218700CDBF13 /* MediaCell.swift in Sources */,
+				AFF8E5F22149185D00CDBF13 /* MediaVC.swift in Sources */,
+				AFF8E5F9214923A600CDBF13 /* Media.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,20 +502,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AF8CD9A32148FE590059D0D9 /* Main.storyboard */ = {
+		AFF8E5E921490A0500CDBF13 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF8CD9A42148FE590059D0D9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AF8CD9A82148FE5C0059D0D9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF8CD9A92148FE5C0059D0D9 /* Base */,
+				AFF8E5EA21490A0500CDBF13 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AFF8E5EB21490A0500CDBF13 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFF8E5EC21490A0500CDBF13 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
