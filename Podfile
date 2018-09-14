@@ -9,11 +9,8 @@ target 'WiFinder' do
   # Pods for WiFinder
 
 pod 'Alamofire', '~> 4.7'
-pod 'AsyncSwift'
-pod 'KVNProgress'
 pod 'Kingfisher'
 pod 'SwiftyJSON'
-pod 'GrowingTextView'
 
   target 'WiFinderTests' do
     inherit! :search_paths

@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import GrowingTextView
 import Photos
-import Async
 
 class ChatBotVC: UIViewController {
 
@@ -97,7 +95,7 @@ class ChatBotVC: UIViewController {
     private func loadRandomBotMessage() {
         //=>    This will return a random number between 0 and array count - 1
         let random = Int(arc4random_uniform(UInt32(arrBotMessages.count)))
-        Async.main(after: 2.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.loadMessageInTableView(message: self.arrBotMessages[random])
         }
     }

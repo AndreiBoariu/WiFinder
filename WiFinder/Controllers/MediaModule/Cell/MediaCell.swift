@@ -17,6 +17,17 @@ class MediaCell: UITableViewCell {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
     // MARK: - Custom Methods
     func loadMedia(curMedia: Media) {
         if let strArtwork = curMedia.artwork {
@@ -59,17 +70,5 @@ class MediaCell: UITableViewCell {
                 self.imgvMedia.layer.transform = CATransform3DMakeScale(1, 1, 1) })
         })
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
 

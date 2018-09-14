@@ -29,8 +29,6 @@ class MediaVC: UIViewController {
     // MARK: - View Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     // MARK: - Notification Methods
@@ -73,22 +71,22 @@ class MediaVC: UIViewController {
     
     private func fetchMediaFromItunes() {
         if let url = buildSearchUrl() {
-            Alamofire.request(url, method: .get, parameters: nil, headers: nil).responseJSON { [weak self] (response) in
+            
+            UIApplication.shared.isNetworkActivityIndicatorVisible      = true
+            
+            Alamofire.request(url,
+                              method: .get,
+                              parameters: nil,
+                              headers: nil)
+                    .responseJSON { [weak self] (response) in
+                UIApplication.shared.isNetworkActivityIndicatorVisible      = false
                 
                 guard let me = self else { return }
                 
-                print("Request: \(String(describing: response.request))")   // original url request
-                print("Response: \(String(describing: response.response))") // http url response
-                print("Result: \(response.result)")                         // response serialization result
-                
-                                if let json = response.result.value {
-                                    print("JSON: \(json)") // serialized json response
-                                }
-                
-                //                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                //                    print("Data: \(utf8Text)") // original server data as UTF8 string
-                //                }
-                
+//                                if let json = response.result.value {
+//                                    print("JSON: \(json)") // serialized json response
+//                                }
+
                 if let error = response.error {
                     let alert = UIAlertController(title: "Oops", message: error.localizedDescription, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
@@ -129,18 +127,6 @@ class MediaVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 
 // MARK: - UITableViewDataSource Methods
@@ -183,7 +169,9 @@ extension MediaVC: UISearchBarDelegate {
                 strMediaType = MediaType.movie.rawValue
         }
         
-        fetchMediaFromItunes()
+        if let strText = searchBar.text, !strText.isEmpty {
+            fetchMediaFromItunes()
+        }
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -200,7 +188,6 @@ extension MediaVC: UISearchBarDelegate {
         searchBar.text = nil
         searchBar.showsCancelButton = false
         
-        // Remove focus from the search bar.
         searchBar.endEditing(true)
     }
 }
