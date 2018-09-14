@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import AVKit
 
 enum MediaType: String {
     case music
@@ -22,14 +23,14 @@ class MediaVC: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var strMediaType = MediaType.music.rawValue
-
+    
+    var arrMedia     = [Media]()
+    
     // MARK: - View Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
-        fetchMediaFromItunes()
     }
     
     // MARK: - Notification Methods
@@ -45,7 +46,7 @@ class MediaVC: UIViewController {
                 URLQueryItem(name: "media", value: strMediaType)
             ]
             
-            if let strSearchText = searchBar.text {
+            if let strSearchText = searchBar.text, strSearchText.count > 0 {
                 urlComponents.queryItems?.append(URLQueryItem(name: "term", value: strSearchText))
             }
             
@@ -55,27 +56,66 @@ class MediaVC: UIViewController {
         return nil
     }
     
+    private func presentPlayerController(_ curMedia: Media) {
+        if let strPreview = curMedia.previewUrl,
+            let urlPreview = URL(string: strPreview) {
+            
+            let player = AVPlayer(url: urlPreview)
+            let playerViewController = AVPlayerViewController()
+            playerViewController.player = player
+            present(playerViewController, animated: true) {
+                playerViewController.player!.play()
+            }
+        }
+    }
+    
     // MARK: - API Methods
     
     private func fetchMediaFromItunes() {
         if let url = buildSearchUrl() {
-            Alamofire.request(url, method: .get, parameters: nil, headers: nil).responseJSON { (response) in
+            Alamofire.request(url, method: .get, parameters: nil, headers: nil).responseJSON { [weak self] (response) in
+                
+                guard let me = self else { return }
+                
                 print("Request: \(String(describing: response.request))")   // original url request
                 print("Response: \(String(describing: response.response))") // http url response
                 print("Result: \(response.result)")                         // response serialization result
                 
-//                if let json = response.result.value {
-//                    print("JSON: \(json)") // serialized json response
-//                }
+                                if let json = response.result.value {
+                                    print("JSON: \(json)") // serialized json response
+                                }
                 
-//                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-//                    print("Data: \(utf8Text)") // original server data as UTF8 string
-//                }
+                //                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                //                    print("Data: \(utf8Text)") // original server data as UTF8 string
+                //                }
                 
-                if let data = response.data {
-                    let json = try! JSON(data: data)
-                    
-                    
+                if let error = response.error {
+                    let alert = UIAlertController(title: "Oops", message: error.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    me.present(alert, animated: true, completion: nil)
+                }
+                else
+                    if let data = response.data {
+                        
+                        let json = try! JSON(data: data)
+                        
+                        if json["resultCount"].intValue == 0 {
+                            let alert = UIAlertController(title: "Oops", message: "No media found for selected search!", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                            me.present(alert, animated: true, completion: nil)
+                        }
+                        else {
+                            me.arrMedia.removeAll()
+                            
+                            let arrResults = json["results"].arrayValue
+                            for mediaJson in arrResults {
+                                var media = Media(json: mediaJson)
+                                media.type = me.strMediaType
+                                me.arrMedia.append(media)
+                            }
+                            
+                            me.tableView.reloadData()
+                        }
                 }
             }
         }
@@ -100,7 +140,7 @@ class MediaVC: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-
+    
 }
 
 // MARK: - UITableViewDataSource Methods
@@ -108,20 +148,19 @@ class MediaVC: UIViewController {
 extension MediaVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return arrMedia.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MediaCell.cellID, for: indexPath) as! MediaCell
-        //cell.lblMenuOption.text = arrMenuOptions[indexPath.row]
-        //cell.imgOption.image = UIImage(named: arrMenuImages[indexPath.row])
-        
+        cell.loadMedia(curMedia: arrMedia[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        presentPlayerController(arrMedia[indexPath.row])
     }
     
     
@@ -142,7 +181,9 @@ extension MediaVC: UISearchBarDelegate {
             }
             else {
                 strMediaType = MediaType.movie.rawValue
-            }
+        }
+        
+        fetchMediaFromItunes()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

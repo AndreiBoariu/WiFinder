@@ -15,8 +15,13 @@ struct Media {
     var trackName: String?
     var longDescription: String?
     var type: String?
+    var previewUrl: String?
     
     init(json: JSON) {
-        
+        artistName = json["artistName"].string
+        artwork = json["artworkUrl100"].string
+        trackName = json["trackName"].string
+        longDescription = json["longDescription"].string
+        previewUrl = json["previewUrl"].string
     }
 }
