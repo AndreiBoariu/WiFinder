@@ -146,7 +146,6 @@ class MediaVC: UIViewController {
 // MARK: - UITableViewDataSource Methods
 
 extension MediaVC: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrMedia.count
     }
@@ -162,7 +161,6 @@ extension MediaVC: UITableViewDelegate, UITableViewDataSource {
         
         presentPlayerController(arrMedia[indexPath.row])
     }
-    
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.01

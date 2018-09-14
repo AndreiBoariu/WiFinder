@@ -50,29 +50,14 @@ class MediaCell: UITableViewCell {
     // MARK: - Action Methods
     
     @IBAction func btnBounceImageViewAction(_ sender: UIButton) {
-        
         imgvMedia.layer.transform = CATransform3DMakeScale(0.5, 0.5, 1)
+        
         UIView.animate(withDuration: 0.3, animations: {
-                self.imgvMedia.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1)
-        },
-                       completion: { finished in
-                        UIView.animate(withDuration: 0.3, animations: {
-                                self.imgvMedia.layer.transform = CATransform3DMakeScale(1, 1, 1) })
+            self.imgvMedia.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1)
+        }, completion: { finished in
+            UIView.animate(withDuration: 0.3, animations: {
+                self.imgvMedia.layer.transform = CATransform3DMakeScale(1, 1, 1) })
         })
-        
-//        imgvMedia.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-//        UIView.animate(withDuration: 0.4) {
-//            self.imgvMedia.transform = CGAffineTransform.identity
-//        }
-        
-//        let animation = CABasicAnimation(keyPath: "position")
-//        animation.duration = 0.05
-//        animation.repeatCount = 3
-//        animation.autoreverses = true
-//        animation.speed = 0.8
-//        animation.fromValue = NSValue(CGPoint: CGPointMake(imgvMedia!.center.x - 3, imgvMedia!.center.y))
-//        animation.toValue = NSValue(CGPoint: CGPointMake(imgvMedia!.center.x + 3, imgvMedia!.center.y))
-//        imgvMedia!.layer.addAnimation(animation, forKey: "position")
     }
     
     override func awakeFromNib() {

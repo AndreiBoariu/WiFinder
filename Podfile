@@ -8,16 +8,12 @@ target 'WiFinder' do
 
   # Pods for WiFinder
 
-pod 'RealmSwift'
-pod 'RxRealm'
-pod 'Moya/RxSwift', '~> 11.0.1'
-pod 'RxSwift',    '~> 4.0'
-pod 'RxCocoa',    '~> 4.0'
-
+pod 'Alamofire', '~> 4.7'
 pod 'AsyncSwift'
 pod 'KVNProgress'
 pod 'Kingfisher'
 pod 'SwiftyJSON'
+pod 'GrowingTextView'
 
   target 'WiFinderTests' do
     inherit! :search_paths
