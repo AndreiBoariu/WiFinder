@@ -170,6 +170,8 @@ extension MediaVC: UITableViewDelegate, UITableViewDataSource {
 // MARK: - UISearchBarDelegate Methods
 extension MediaVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        searchBar.endEditing(true)
+        
         if selectedScope == 0 {
             strMediaType = MediaType.music.rawValue
         }
@@ -185,6 +187,20 @@ extension MediaVC: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        fetchMediaFromItunes()
+        if !(searchBar.text?.isEmpty)! || !searchText.isEmpty {
+            fetchMediaFromItunes()
+        }
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = nil
+        searchBar.showsCancelButton = false
+        
+        // Remove focus from the search bar.
+        searchBar.endEditing(true)
     }
 }

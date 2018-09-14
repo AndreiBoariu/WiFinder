@@ -20,6 +20,9 @@
 		AFF8E5F42149186D00CDBF13 /* ChatBotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF8E5F32149186D00CDBF13 /* ChatBotVC.swift */; };
 		AFF8E5F72149218700CDBF13 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF8E5F62149218700CDBF13 /* MediaCell.swift */; };
 		AFF8E5F9214923A600CDBF13 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF8E5F8214923A600CDBF13 /* Media.swift */; };
+		AFF8E5FB214BFAC800CDBF13 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF8E5FA214BFAC800CDBF13 /* Message.swift */; };
+		AFF8E5FE214C144500CDBF13 /* TextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF8E5FD214C144500CDBF13 /* TextMessageCell.swift */; };
+		AFF8E600214C145900CDBF13 /* ImageMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF8E5FF214C145900CDBF13 /* ImageMessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		AFF8E5F32149186D00CDBF13 /* ChatBotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotVC.swift; sourceTree = "<group>"; };
 		AFF8E5F62149218700CDBF13 /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
 		AFF8E5F8214923A600CDBF13 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		AFF8E5FA214BFAC800CDBF13 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		AFF8E5FD214C144500CDBF13 /* TextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageCell.swift; sourceTree = "<group>"; };
+		AFF8E5FF214C145900CDBF13 /* ImageMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMessageCell.swift; sourceTree = "<group>"; };
 		D85ED4E2ACF23E84BD79843A /* Pods-WiFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiFinderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiFinderUITests/Pods-WiFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,7 +190,9 @@
 		AFF8E5E62149098800CDBF13 /* ChatBotModule */ = {
 			isa = PBXGroup;
 			children = (
+				AFF8E5FC214C142800CDBF13 /* Cell */,
 				AFF8E5F32149186D00CDBF13 /* ChatBotVC.swift */,
+				AFF8E5FA214BFAC800CDBF13 /* Message.swift */,
 			);
 			path = ChatBotModule;
 			sourceTree = "<group>";
@@ -226,6 +234,15 @@
 			isa = PBXGroup;
 			children = (
 				AFF8E5F62149218700CDBF13 /* MediaCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		AFF8E5FC214C142800CDBF13 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AFF8E5FD214C144500CDBF13 /* TextMessageCell.swift */,
+				AFF8E5FF214C145900CDBF13 /* ImageMessageCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -450,9 +467,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF8E5FE214C144500CDBF13 /* TextMessageCell.swift in Sources */,
+				AFF8E600214C145900CDBF13 /* ImageMessageCell.swift in Sources */,
 				AFF8E5F42149186D00CDBF13 /* ChatBotVC.swift in Sources */,
 				AF8CD9A02148FE590059D0D9 /* AppDelegate.swift in Sources */,
 				AFF8E5F72149218700CDBF13 /* MediaCell.swift in Sources */,
+				AFF8E5FB214BFAC800CDBF13 /* Message.swift in Sources */,
 				AFF8E5F22149185D00CDBF13 /* MediaVC.swift in Sources */,
 				AFF8E5F9214923A600CDBF13 /* Media.swift in Sources */,
 			);
@@ -630,7 +650,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WiFinder/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wifinder.WiFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -645,7 +668,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WiFinder/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wifinder.WiFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -661,7 +687,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WiFinderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wifinder.WiFinderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -678,7 +708,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WiFinderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wifinder.WiFinderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -694,7 +728,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WiFinderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wifinder.WiFinderUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -710,7 +748,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WiFinderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wifinder.WiFinderUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
